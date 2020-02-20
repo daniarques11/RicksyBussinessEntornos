@@ -4,8 +4,9 @@ package edu.elsmancs.UfosPark;
 import java.util.HashMap;
 
 import edu.elsmancs.creditCard.CreditCard;
+import edu.elsmancs.guestDispatcher.GuestDispatcher;
 
-public class UfosPark {
+public class UfosPark implements GuestDispatcher{
 
 	private HashMap<Ufo, CreditCard> flota = new HashMap<>(); 
 	private double fee = 500;
@@ -23,6 +24,7 @@ public class UfosPark {
 		flota.put(ufo, null);
 	}
 	
+	@Override
 	public void dispatch(CreditCard user) {
 		if (!flota.containsValue(user) && freeUfos() > 0) {
 			if(user.pay(this.fee)) {

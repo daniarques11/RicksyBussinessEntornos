@@ -2,7 +2,9 @@ package edu.elsmancs.crystalExpender;
 
 import edu.elsmancs.creditCard.CreditCard;
 
-public class CrystalExpender {
+import edu.elsmancs.guestDispatcher.GuestDispatcher;
+
+public class CrystalExpender implements GuestDispatcher {
 
 	private int stock;
 	private double itemCost;
