@@ -7,8 +7,9 @@ import org.junit.Test;
 public class CreditCardTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void crearCreditCardeTest() {
+		CreditCard daniel = new CreditCard("Daniel Arqués", "9214921492524");
+		assertNotNull(daniel);
 	}
 
 }
