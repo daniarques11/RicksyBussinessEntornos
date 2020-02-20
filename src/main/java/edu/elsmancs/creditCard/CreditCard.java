@@ -1,5 +1,6 @@
 package edu.elsmancs.creditCard;
 
+
 public class CreditCard {
 	
 	private String owner = null;
@@ -15,6 +16,11 @@ public class CreditCard {
 		this.number = number;
 	}
 	
+	//este getter está solo para que se pueda acceder desde el toString de Menu
+	
+	public String owner() {
+		return this.owner;
+	}
 	public String number() {
 		return this.number;
 	}
@@ -30,6 +36,8 @@ public class CreditCard {
 		}
 		return false;
 	}
+	
+
 	@Override
 	public String toString() {
 		return "owner: " + this.owner + "\nnumber: " + this.number + "\ncredit: " + this.credit + this.SYMBOL;

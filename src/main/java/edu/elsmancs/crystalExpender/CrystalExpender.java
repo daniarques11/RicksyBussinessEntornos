@@ -7,7 +7,7 @@ import edu.elsmancs.guestDispatcher.GuestDispatcher;
 public class CrystalExpender implements GuestDispatcher {
 
 	private int stock;
-	private double itemCost;
+	private final double itemCost;
 	
 	public CrystalExpender(int stock, double itemCost) {
 		this.stock = stock;

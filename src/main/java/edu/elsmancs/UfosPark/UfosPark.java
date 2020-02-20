@@ -10,7 +10,7 @@ public class UfosPark implements GuestDispatcher{
 
 	private HashMap<Ufo, CreditCard> flota = new HashMap<>(); 
 	private double fee = 500;
-	/*
+	/**
 	 * Constructor
 	 * */
 	public UfosPark() {	}
@@ -23,6 +23,9 @@ public class UfosPark implements GuestDispatcher{
 		Ufo ufo = new Ufo(ufoID);
 		flota.put(ufo, null);
 	}
+	
+	// override de la interfaz GuestDispatcher
+	// Usa los métodos getFreeUfo y freeUfos para intentar despachar un ovni
 	
 	@Override
 	public void dispatch(CreditCard user) {
@@ -56,6 +59,8 @@ public class UfosPark implements GuestDispatcher{
 		return freeUfoCount;
 	}
 
+	//Obtener el ufo de un determinado creditCard
+	
 	public Ufo getUfoOf(String creditCardNum) {
 		for (Ufo ufo : flota.keySet()) {
 			if(flota.get(ufo) != null && flota.get(ufo).number() == creditCardNum) {

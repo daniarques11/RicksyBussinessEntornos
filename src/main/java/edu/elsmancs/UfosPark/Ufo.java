@@ -2,7 +2,7 @@ package edu.elsmancs.UfosPark;
 
 public class Ufo {
 	
-	private String ID;
+	private final String ID;
 	
 	public Ufo(String ID) {
 		this.ID = ID;
