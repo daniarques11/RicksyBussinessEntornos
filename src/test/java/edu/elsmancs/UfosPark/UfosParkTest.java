@@ -2,19 +2,19 @@ package edu.elsmancs.UfosPark;
 
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import edu.elsmancs.creditCard.CreditCard;
 
 public class UfosParkTest {
 
-	UfosPark ufosPark = new UfosPark();
-    String[] ufosID = { "ufo1", "uffo2" };
+	
 	
 	
 	@Test
 	public void test() {
+		UfosPark ufosPark = new UfosPark();
+	    String[] ufosID = { "ufo1", "uffo2" };
 		for (String ovni : ufosID) {
 			ufosPark.add(ovni);
 	    }
@@ -23,8 +23,14 @@ public class UfosParkTest {
 
 	@Test
 	public void getUfoOfTest() {
+		UfosPark ufosPark = new UfosPark();
+	    String[] ufosID = { "ufo1", "uffo2" };
+	    for (String ovni : ufosID) {
+			ufosPark.add(ovni);
+	    }
         CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
-        assertEquals("ufo1", ufosPark.getUfoOf(abradolph.number()));
+        ufosPark.dispatch(abradolph);
+        assertEquals("uffo2", ufosPark.getUfoOf(abradolph.number()).toString());
 
 	}
 }
