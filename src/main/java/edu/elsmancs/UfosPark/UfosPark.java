@@ -7,7 +7,7 @@ import edu.elsmancs.creditCard.CreditCard;
 
 public class UfosPark {
 
-	private HashMap<Ufo, CreditCard> flota = null; 
+	private HashMap<Ufo, CreditCard> flota = new HashMap<>(); 
 	private double fee = 500;
 	/*
 	 * Constructor
