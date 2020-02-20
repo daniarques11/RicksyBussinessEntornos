@@ -19,6 +19,17 @@ public class CreditCard {
 		return this.number;
 	}
 	
+	public double credit() {
+		return this.credit;
+	}
+	
+	public boolean pay(double amount) {
+		if (this.credit >= amount) {
+			this.credit -= amount;
+			return true;
+		}
+		return false;
+	}
 	@Override
 	public String toString() {
 		return "owner: " + this.owner + "\nnumber: " + this.number + "\ncredit: " + this.credit + this.SYMBOL;

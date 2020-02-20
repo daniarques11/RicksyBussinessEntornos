@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.elsmancs.creditCard.CreditCard;
+
 public class UfosParkTest {
 
 	UfosPark ufosPark = new UfosPark();
@@ -19,4 +21,10 @@ public class UfosParkTest {
 		assertNotNull(ufosPark);
 	}
 
+	@Test
+	public void getUfoOfTest() {
+        CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
+        assertEquals("ufo1", ufosPark.getUfoOf(abradolph.number()));
+
+	}
 }

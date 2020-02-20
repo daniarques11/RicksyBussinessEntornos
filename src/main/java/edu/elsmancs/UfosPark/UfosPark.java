@@ -25,8 +25,8 @@ public class UfosPark {
 	
 	public void dispatch(CreditCard user) {
 		if (!flota.containsValue(user) && freeUfos() > 0) {
-			
-			
+			flota.put(getFreeUfo(), user);
+			user.pay(this.fee);
 		} else {
 			
 		}
@@ -34,7 +34,7 @@ public class UfosPark {
 	
 	Ufo getFreeUfo() {
 		for(Ufo ufo : flota.keySet()) {
-			if(flota.get(ufo) != null) {
+			if(flota.get(ufo) == null) {
 				return ufo;
 			}
 		}
@@ -44,11 +44,20 @@ public class UfosPark {
 	int freeUfos() {
 		int freeUfoCount = 0;
 		for (Ufo ufo : flota.keySet()) {
-			if(flota.get(ufo) != null ) {
+			if(flota.get(ufo) == null ) {
 				freeUfoCount++;
 			}
 		}	
 		return freeUfoCount;
+	}
+
+	public Ufo getUfoOf(String creditCardNum) {
+		for (Ufo ufo : flota.keySet()) {
+			if(flota.get(ufo).number() == creditCardNum) {
+				return ufo;
+			}
+		}
+		return null;
 	}
 	
 }
