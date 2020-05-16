@@ -1,6 +1,10 @@
 package edu.elsmancs.creditCard;
 
-
+/**
+ * 
+ * CreditCard representa la tarjeta de crédito de un cliente. Cada CreditCard contiene una cantidad de crédito "EZI".
+ *
+ */
 public class CreditCard {
 	
 	private String owner = null;
@@ -9,7 +13,9 @@ public class CreditCard {
 	private final String SYMBOL = "EZI"; 
 	
 	/**
-	 * Constructor
+	 * Construye un CreditCard con un propietario y un número de tarjeta. 
+	 * @param owner
+	 * @param number
 	 */
 	public CreditCard(String owner, String number) {
 		this.owner = owner;
@@ -29,6 +35,11 @@ public class CreditCard {
 		return this.credit;
 	}
 	
+	/**
+	 * Retira una cantidad de crédito de la tarjeta si hay saldo suficiente.
+	 * @param amount
+	 * @return payed or not payed
+	 */
 	public boolean pay(double amount) {
 		if (this.credit >= amount) {
 			this.credit -= amount;
