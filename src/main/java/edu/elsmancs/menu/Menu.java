@@ -5,13 +5,20 @@ import java.util.ArrayList;
 import edu.elsmancs.creditCard.CreditCard;
 import edu.elsmancs.guestDispatcher.GuestDispatcher;
 
+/**
+ * Menu representa un vale por un determinado menú.
+ * Tiene un stock finito, el producto tiene un precio y se guarda un registro de los menús pedidos.
+ *
+ */
 public class Menu implements GuestDispatcher{
 	
 	private int stock;
 	private final double cost;
 	private ArrayList<CreditCard> pedidos = new ArrayList<CreditCard>();
 	/**
-	 * Constructor
+	 * Construye e inicializa un determinado menú
+	 * @param stock
+	 * @param cost
 	 */
 	public Menu(int stock, double cost) {
 		this.stock = stock;
@@ -25,9 +32,12 @@ public class Menu implements GuestDispatcher{
 	public int totalPedidos() {
 		return pedidos.size();
 	}
-	//Override de la interfaz
 	
-	@Override
+	/**
+	 * Despacha un cliente cobrándole un menú si tiene crédito.
+	 * Si se cobra el menú, se añade al registro.
+	 * @param user
+	 */
 	public void dispatch(CreditCard user) {
 		if (stock > 0) {
 			if(user.pay(cost)) {
