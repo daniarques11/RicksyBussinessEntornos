@@ -233,14 +233,14 @@ public class Ricksy {
         
         System.out.println("\nAbradolph pide un delicioso menú Rick!\n" + 
                 "==========================================");
-		receptivo.dispatch(abradolph);
+		rickMenu.dispatch(abradolph);
 		System.out.println("Pedidos realizados: "+ rickMenu.totalPedidos());
 		System.out.println(rickMenu.toString());
 		System.out.println("\nSquanchy, gearHead, birdperson y morty tambien se apuntan, pero gearHead y morty no tienen un duro... asi que no comen\n" + 
                 "==========================================");
-		receptivo.dispatch(squanchy);
-		receptivo.dispatch(gearHead);
-		receptivo.dispatch(birdpearson);
+		rickMenu.dispatch(squanchy);
+		rickMenu.dispatch(gearHead);
+		rickMenu.dispatch(birdpearson);
 		System.out.println("Pedidos realizados: "+ rickMenu.totalPedidos());
 		System.out.println(rickMenu.toString());
 
