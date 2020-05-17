@@ -18,7 +18,7 @@ public class Receptivo {
 	
 	/**
 	 * Añade un despachador al receptivo
-	 * @param dispatchableComponent
+	 * @param dispatchable component
 	 */
 	public void registra(GuestDispatcher dispatchableComponent) {
 		this.dispatchList.add(dispatchableComponent);

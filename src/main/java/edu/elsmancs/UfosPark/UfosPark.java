@@ -6,19 +6,32 @@ import java.util.HashMap;
 import edu.elsmancs.creditCard.CreditCard;
 import edu.elsmancs.guestDispatcher.GuestDispatcher;
 
+/**
+ * UfosPark consiste en una flota de taxis Ufo
+ * Se guarda un registro del cliente actual de cada Ufo
+ * Los Ufo que pertenecen a un mismo UfosPark constan de una tasa para su uso
+ * Véase la clase {@link edu.elsmancs.UfosPark.Ufo}
+ *
+ */
 public class UfosPark implements GuestDispatcher{
 
 	private HashMap<Ufo, CreditCard> flota = new HashMap<>(); 
 	private double fee = 500;
-	/**
-	 * Constructor
-	 * */
+
+
 	public UfosPark() {	}
 	
+	/**
+	 * @return tamaño de la flota
+	 */
 	int size() {
 		return this.flota.size();
 	}
 	
+	/**
+	 * Añade un Ufo a la flota
+	 * @param ufoID
+	 */
 	public void add(String ufoID) {
 		Ufo ufo = new Ufo(ufoID);
 		flota.put(ufo, null);
@@ -27,6 +40,10 @@ public class UfosPark implements GuestDispatcher{
 	// override de la interfaz GuestDispatcher
 	// Usa los métodos getFreeUfo y freeUfos para intentar despachar un ovni
 	
+	/**
+	 * Despacha un cliente cobrándole un Ufo taxi si tiene crédito
+	 * @param user
+	 */
 	@Override
 	public void dispatch(CreditCard user) {
 		if (!flota.containsValue(user) && freeUfos() > 0) {
@@ -40,6 +57,10 @@ public class UfosPark implements GuestDispatcher{
 		}
 	}
 	
+	/**
+	 * Obtiene un Ufo libre
+	 * @return ufo libre
+	 */
 	Ufo getFreeUfo() {
 		for(Ufo ufo : flota.keySet()) {
 			if(flota.get(ufo) == null) {
@@ -49,6 +70,10 @@ public class UfosPark implements GuestDispatcher{
 		return null;
 	}
 	
+	/**
+	 * Obtiene el número de Ufos libres en la flota
+	 * @return nº de Ufos libres
+	 */
 	int freeUfos() {
 		int freeUfoCount = 0;
 		for (Ufo ufo : flota.keySet()) {
@@ -59,7 +84,11 @@ public class UfosPark implements GuestDispatcher{
 		return freeUfoCount;
 	}
 
-	//Obtener el ufo de un determinado creditCard
+	/**
+	 * Obtener el ufo de un determinado creditCard
+	 * @param creditCardNum
+	 * @return ufo
+	 */
 	
 	public Ufo getUfoOf(String creditCardNum) {
 		for (Ufo ufo : flota.keySet()) {
