@@ -2,7 +2,7 @@ package edu.elsmancs.guestDispatcher;
 
 import edu.elsmancs.creditCard.CreditCard;
 /**
- * Interfaz para las clases que despachan clientes a partir de su CreditCard
+ * Componente encargado de despachar un cliente a través de su CreditCard
  *
  * @author Dani Arqués
  * 
