@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"edu.elsmancs.guestDispatcher"},{"l":"edu.elsmancs.menu"},{"l":"edu.elsmancs.receptivo"},{"l":"edu.elsmancs.ricksy"}]

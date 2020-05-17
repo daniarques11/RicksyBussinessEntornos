@@ -8,9 +8,12 @@ import edu.elsmancs.guestDispatcher.GuestDispatcher;
 
 /**
  * UfosPark consiste en una flota de taxis Ufo
+ * 
  * Se guarda un registro del cliente actual de cada Ufo
+ * 
  * Los Ufo que pertenecen a un mismo UfosPark constan de una tasa para su uso
- * Véase la clase {@link edu.elsmancs.UfosPark.Ufo} para conocer en detalle
+ * 
+ * Véaase la clase {@link edu.elsmancs.UfosPark.Ufo} para conocer en detalle
  * 
  * @author Dani Arqués
  * 
