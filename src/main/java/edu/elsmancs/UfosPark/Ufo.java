@@ -1,7 +1,7 @@
 package edu.elsmancs.UfosPark;
 
 /**
- * Ufo representa un Ovni taxi. Los Ufo tiene una ID inmutable
+ * Ufo representa un Ovni taxi. Los Ufo tiene un identificador
  * 
  * @author Dani Arqués
  * 

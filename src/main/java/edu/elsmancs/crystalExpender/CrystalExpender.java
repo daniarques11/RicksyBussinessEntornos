@@ -24,6 +24,10 @@ public class CrystalExpender implements GuestDispatcher {
 		this.itemCost = itemCost;
 	}
 	
+	/**
+	 * Devuelve la cantidad de cristales disponibles
+	 * @return stock
+	 */
 	public double stock() {
 		return this.stock;
 	}

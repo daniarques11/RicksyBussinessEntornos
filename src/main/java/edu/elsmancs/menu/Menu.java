@@ -6,7 +6,8 @@ import edu.elsmancs.creditCard.CreditCard;
 import edu.elsmancs.guestDispatcher.GuestDispatcher;
 
 /**
- * Menu representa un vale por un determinado menú
+ * Menu representa el servicio de un menú
+ * <br>
  * Tiene un stock finito, el producto tiene un precio y se guarda un registro de los menús pedidos
  *
  * @author Dani Arqués
@@ -27,10 +28,18 @@ public class Menu implements GuestDispatcher{
 		this.cost = cost;
 	}
 
+	/**
+	 * Devuelve la cantidad de pedidos disponibles
+	 * @return stock
+	 */
 	public int stock() {
 		return stock;
 	}
 	
+	/**
+	 * Devuelve la cantidad de pedidos realizados
+	 * @return pedidos
+	 */
 	public int totalPedidos() {
 		return pedidos.size();
 	}

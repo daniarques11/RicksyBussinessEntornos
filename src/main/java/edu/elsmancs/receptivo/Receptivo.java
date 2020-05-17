@@ -7,7 +7,9 @@ import edu.elsmancs.guestDispatcher.GuestDispatcher;
 
 /**
  * Receptivo es un gestor encargado de despachar un usuario con todos los
- * despachadores disponibles. Se compone de un conjunto de despachadores
+ * despachadores disponibles
+ * <br>
+ * Se compone de un conjunto de despachadores
  * 
  * @author Dani Arqués
  * 
@@ -28,6 +30,10 @@ public class Receptivo {
 		this.dispatchList.add(dispatchableComponent);
 	}
 
+	/**
+	 * Despacha al usuario (pasado por parámetro) con todos los despachadores disponibles
+	 * @param user
+	 */
 	public void dispatch(CreditCard user) {
 		for (GuestDispatcher dispatchable : dispatchList) {
 			dispatchable.dispatch(user);
