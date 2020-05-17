@@ -7,6 +7,8 @@ import edu.elsmancs.guestDispatcher.GuestDispatcher;
 /**
  * CrystalExpender representa un expendedor de cristales a usuarios. Tiene un stock finito y el producto tiene un precio
  *
+ * @author Dani Arqués
+ * 
  */
 public class CrystalExpender implements GuestDispatcher {
 
@@ -27,7 +29,7 @@ public class CrystalExpender implements GuestDispatcher {
 	}
 	
 	/**
-	 * Despacha un cliente cobrándole un cristal si tiene crédito.
+	 * Despacha un cliente cobrándole un cristal si tiene crédito
 	 * @param user
 	 */
 	public void dispatch(CreditCard user) {

@@ -1,9 +1,10 @@
 package edu.elsmancs.creditCard;
 
 /**
- * 
- * CreditCard representa la tarjeta de crédito de un cliente. Cada CreditCard contiene una cantidad de crédito "EZI".
+ * CreditCard representa la tarjeta de crédito de un cliente. Cada CreditCard contiene una cantidad de crédito "EZI"
  *
+ * @author Dani Arqués
+ * 
  */
 public class CreditCard {
 	
